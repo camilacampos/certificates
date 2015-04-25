@@ -1,0 +1,6 @@
+<h1>Eventos encontrados para <%=@participant.name%></h1>
+<div class="row">
+  <%@events.each do |event|%>
+    <div class="col-md-6 event"><%=link_to event.name, show_certificate_path(event, @participant, format: :pdf), target: '_blank' %></div>
+  <%end%>
+</div>
