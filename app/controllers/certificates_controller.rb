@@ -11,6 +11,23 @@ class CertificatesController < ApplicationController
   def show
     @event = Event.find(params[:event_id])
     @participant = Participant.find(params[:participant_id])
-    render @event.pdf_template, layout: @event.pdf_layout
+    respond_to do |format|
+      format.pdf do
+        render pdf:                            "#{@event.name} - #{@participant.name}",
+               disposition:                    'attachment',                 # default 'inline'
+               template:                       "certificates/#{@event.pdf_layout}.pdf.erb",
+               layout:                         "#{@event.pdf_layout}.html",                   # use 'pdf.html' for a pdf.html.erb file
+               show_as_html:                   params[:debug].present?,      # allow debugging based on url param
+               orientation:                    'Landscape',                  # default Portrait
+               page_size:                      'Letter',            # default A4
+               margin:  {
+                  top:               5,
+                  bottom:            0,
+                  left:              0,
+                  right:             0
+              },
+              title:                          "Certificado #{@event.name}"            # otherwise first page title is used
+      end
+    end
   end
 end

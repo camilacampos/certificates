@@ -3,5 +3,5 @@ class Participant < ActiveRecord::Base
 
   validates_presence_of :name
   validates_presence_of :email
-  validates_presence_of :event
+  validates_presence_of :participation_type
 end

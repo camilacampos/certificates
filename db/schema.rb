@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 20150425134520) do
     t.string   "name"
     t.string   "pdf_layout",   default: "pdf"
     t.string   "pdf_template", default: "pdf"
+    t.string   "location"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "workload",     default: 0
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end
@@ -35,14 +39,11 @@ ActiveRecord::Schema.define(version: 20150425134520) do
   create_table "participants", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "participation_type"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
-
-  add_index "participants", ["event_id"], name: "index_participants_on_event_id", using: :btree
 
   add_foreign_key "events_participants", "events"
   add_foreign_key "events_participants", "participants"
-  add_foreign_key "participants", "events"
 end

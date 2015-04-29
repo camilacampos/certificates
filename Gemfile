@@ -44,3 +44,6 @@ group :development, :test do
 end
 
 gem 'bootstrap-sass', '~> 3.3.4'
+
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
