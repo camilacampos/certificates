@@ -4,3 +4,9 @@
     <div class="col-md-6 event"><%=link_to event.name, show_certificate_path(event, @participant, format: :pdf), target: '_blank' %></div>
   <%end%>
 </div>
+<%=form_tag search_events_path, method: :get, class: "form-horizontal" do%>
+  <div class="form-group col-md-12">
+    <%=text_field_tag :email, "", class: "form-control input-lg", placeholder: "Digite seu email"%>
+  </div>
+  <button type="submit" class="btn btn-primary">Pesquisar</button>
+<%end%>
