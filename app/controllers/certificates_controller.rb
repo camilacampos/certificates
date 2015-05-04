@@ -15,7 +15,7 @@ class CertificatesController < ApplicationController
       format.pdf do
         render pdf:                            "#{@event.name} - #{@participant.name}",
                disposition:                    'attachment',                 # default 'inline'
-               template:                       "certificates/#{@event.pdf_layout}.pdf.erb",
+               template:                       "certificates/#{@event.pdf_template}.pdf.erb",
                layout:                         "#{@event.pdf_layout}.html",                   # use 'pdf.html' for a pdf.html.erb file
                show_as_html:                   params[:debug].present?,      # allow debugging based on url param
                orientation:                    'Landscape',                  # default Portrait
