@@ -1,0 +1,35 @@
+require 'rails_helper'
+
+RSpec.describe Participant, type: :model do
+  it 'has a valid factory' do
+    expect(build(:participant)).to be_valid
+  end
+
+  context 'is invalid' do
+    it 'without a name' do
+      participant = build(:participant, name: nil)
+      participant.valid?
+      expect(participant.errors[:name]).to include("can't be blank")
+    end
+
+    it 'without a email' do
+      participant = build(:participant, email: nil)
+      participant.valid?
+      expect(participant.errors[:email]).to include("can't be blank")
+    end
+
+    it 'without a participation_type' do
+      participant = build(:participant, participation_type: nil)
+      participant.valid?
+      expect(participant.errors[:participation_type]).to include("can't be blank")
+    end
+  end
+
+  context 'is valid' do
+    it 'without events' do
+      participant = build(:participant, events: [])
+      participant.valid?
+      expect(participant.errors[:events]).to be_empty
+    end
+  end
+end
