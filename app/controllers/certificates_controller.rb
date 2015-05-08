@@ -9,8 +9,10 @@ class CertificatesController < ApplicationController
   end
 
   def show
+    #TODO: Improve error handling if participant is not on a particular event
+    #TODO: Test above case
     @event = Event.find(params[:event_id])
-    @participant = Participant.find(params[:participant_id])
+    @participant = @event.participants.find(params[:participant_id])
     respond_to do |format|
       format.pdf do
         render pdf:                            "#{@event.name} - #{@participant.name}",

@@ -61,6 +61,20 @@ RSpec.describe CertificatesController, type: :controller do
         expect(response).to render_template(:index)
       end
     end
+
+    describe "if email is not in database" do
+      before(:each) do
+        get :search, email: Faker::Internet.email
+      end
+
+      it "returns http not found" do
+        expect(response).to have_http_status(:not_found)
+      end
+
+      it "renders the index template" do
+        expect(response).to render_template(:index)
+      end
+    end
   end
 
   describe "GET #show" do
