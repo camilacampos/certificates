@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
+  it { expect(subject).to validate_presence_of(:name) }
+  it { expect(subject).to validate_presence_of(:location) }
+  it { expect(subject).to validate_presence_of(:start_date) }
+  it { expect(subject).to validate_presence_of(:end_date) }
+  it { expect(subject).to validate_presence_of(:workload) }
+  it { expect(subject).to have_and_belong_to_many(:participants).autosave(true) }
+
   it 'has a valid factory' do
     expect(build(:event)).to be_valid
   end
