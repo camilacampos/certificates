@@ -37,3 +37,5 @@ bower.json
 Capfile
 config/deploy.rb
 config/deploy/*
+
+.env
