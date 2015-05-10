@@ -41,6 +41,8 @@ rails server
 
 The go to your browser and load ```localhost:3000``` and search for ```john@example.com```. You should see the data you filled on console.
 
+To run the tests, just run ```rspec spec``` on your console.
+
 # Contributing
 
 Please, check [Contributing](https://github.com/alagoasdevday/certificates/blob/master/CONTRIBUTING.md)
