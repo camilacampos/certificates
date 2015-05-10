@@ -1,15 +1,15 @@
 # Contributing
 
-We love pull requests from everyone. By participating in this project, you're encouraged to submit [pull requests](https://github.com/alagoasdevday/certiticates/pulls), [propose features and discuss issues](https://github.com/alagoasdevday/certiticates/issues). When in doubt, ask a question using issues.
+We love pull requests from everyone. By participating in this project, you're encouraged to submit [pull requests](https://github.com/alagoasdevday/certificates/pulls), [propose features and discuss issues](https://github.com/alagoasdevday/certificates/issues). When in doubt, ask a question using issues.
 
 #### Fork the Project
 
-Fork the [project on Github](https://github.com/alagoasdevday/certiticates) and check out your copy.
+Fork the [project on Github](https://github.com/alagoasdevday/certificates) and check out your copy.
 
 ```
-git clone https://github.com/contributor/certiticates.git
-cd certiticates
-git remote add upstream https://github.com/alagoasdevday/certiticates.git
+git clone https://github.com/contributor/certificates.git
+cd certificates
+git remote add upstream https://github.com/alagoasdevday/certificates.git
 ```
 
 #### Create a Topic Branch
@@ -65,7 +65,7 @@ git push origin my-feature-branch
 
 #### Make a Pull Request
 
-Go to https://github.com/contributor/certiticates and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
+Go to https://github.com/contributor/certificates and select your feature branch. Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
 
 #### Rebase
 
@@ -82,7 +82,7 @@ git push origin my-feature-branch -f
 Update the [CHANGELOG](CHANGELOG.md) with the pull request number. A typical entry looks as follows.
 
 ```
-* [#123](https://github.com/alagoasdevday/certiticates/pull/1): New Feature x - [@contributor](https://github.com/contributor).
+* [#123](https://github.com/alagoasdevday/certificates/pull/1): New Feature x - [@contributor](https://github.com/contributor).
 ```
 
 Amend your previous commit and force push the changes.
