@@ -47,6 +47,14 @@ RSpec.describe "Certificates", type: :request do
       expect(response).to render_template(layout: [:layouts, :pdf])
     end
 
+    it "renders PDF certificate from friendly_id" do
+      get show_certificate_path(@event, @participant.friendly_id, format: :pdf)
+
+      expect(response).to have_http_status(200)
+      expect(response).to render_template('certificates/pdf.pdf.erb')
+      expect(response).to render_template(layout: [:layouts, :pdf])
+    end
+
     # it "renders an error if participant hasn't participated on the event" do
     #   participant = create(:participant, events: [])
     #   get show_certificate_path(@event, participant, format: :pdf)

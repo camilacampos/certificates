@@ -1,4 +1,8 @@
 class Event < ActiveRecord::Base
+  extend FriendlyId
+
+  friendly_id :name
+
   has_and_belongs_to_many :participants, autosave: true
 
   default_scope { order(created_at: :desc) }
