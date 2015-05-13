@@ -1,8 +1,9 @@
 # README
 
-[![Build Status](https://travis-ci.org/alagoasdevday/certificates.svg)](https://travis-ci.org/alagoasdevday/certificates)
+[![Build Status](https://travis-ci.org/alagoasdevday/certificates.svg?branch=master)](https://travis-ci.org/alagoasdevday/certificates)
 [![Test Coverage](https://codeclimate.com/github/alagoasdevday/certificates/badges/coverage.svg)](https://codeclimate.com/github/alagoasdevday/certificates/coverage)
 [![Code Climate](https://codeclimate.com/github/alagoasdevday/certificates/badges/gpa.svg)](https://codeclimate.com/github/alagoasdevday/certificates)
+[![Security](https://hakiri.io/github/alagoasdevday/certificates/master.svg)](https://hakiri.io/github/alagoasdevday/certificates/master)
 
 Certificates app for Alagoas Dev Day
 
