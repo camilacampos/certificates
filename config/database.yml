@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: certificates_production
-  username: certificates
+  database: <%= ENV['CERTIFICATES_DATABASE_DATABASE'] %>
+  username: <%= ENV['CERTIFICATES_DATABASE_USERNAME'] %>
   password: <%= ENV['CERTIFICATES_DATABASE_PASSWORD'] %>
