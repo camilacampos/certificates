@@ -59,8 +59,6 @@ ActiveRecord::Schema.define(version: 20150513002848) do
     t.string   "slug"
   end
 
-  add_index "participants", ["slug"], name: "index_participants_on_slug", unique: true, using: :btree
-
   add_foreign_key "events_participants", "events"
   add_foreign_key "events_participants", "participants"
 end

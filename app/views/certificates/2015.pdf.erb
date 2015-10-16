@@ -1,2 +1,2 @@
 <%=wicked_pdf_image_tag "2015/background.jpg"%>
-<h3 class="center">Certificamos que <%=@participant.name%> participou como <%=@participant.participation_type%> do(a) <%=@event.name%> em <%=@event.location%>, durante o período de <%=@event.start_date.strftime('%d/%m/%Y')%> à <%=@event.end_date.strftime('%d/%m/%Y')%>, com carga horária de <%=@event.workload%> hora(s).</h3>
+<h3 class="center">Certificamos que <%=@participant.name%> participou como <%=@participant.participation_type%> do <%=@event.name%> no <%=@event.location%>, durante o período de <%=@event.start_date.strftime('%d/%m/%Y')%> à <%=@event.end_date.strftime('%d/%m/%Y')%>, com carga horária total de <%=@event.workload%> horas.</h3>
