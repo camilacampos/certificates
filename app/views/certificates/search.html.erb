@@ -1,7 +1,9 @@
 <h1>Eventos encontrados para <%=@participant.name%></h1>
 <div class="row">
   <%@events.each do |event|%>
-    <div id="<%=dom_id(event)%>" class="col-md-6 event btn btn-default"><%=link_to event.name, show_certificate_path(event, @participant, format: :pdf), target: '_blank' %></div>
+    <div id="<%=dom_id(event)%>" class="col-md-6 event btn btn-default">
+      <%=link_to event.name, show_certificate_path(event, @participant, format: :pdf), target: '_blank' %>
+    </div>
   <%end%>
 </div>
 <%=form_tag search_events_path, method: :get, class: "form-horizontal" do%>
@@ -10,3 +12,4 @@
   </div>
   <button type="submit" class="btn btn-primary">Pesquisar novamente</button>
 <%end%>
+
