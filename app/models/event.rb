@@ -12,4 +12,12 @@ class Event < ActiveRecord::Base
   validates_presence_of :start_date
   validates_presence_of :end_date
   validates_presence_of :workload
+
+  after_initialize :default_values
+
+  private
+
+  def default_values
+    self.template ||= 'rails_girls'
+  end
 end
