@@ -1,3 +1,7 @@
-<%=wicked_pdf_image_tag "2015/background.jpg"%>
-<h3 class="center" style="padding-left: 40px;">Certificamos que <%=@participant.name%> participou como <%= @participant.participation_type %> do Rails Girls São Paulo no <%=@event.location%>, durante o período de <%=@event.start_date.strftime('%d/%m/%Y')%> à <%=@event.end_date.strftime('%d/%m/%Y')%>, com carga horária total de <%=@event.workload%> horas.</h3>
+<%= wicked_pdf_image_tag "backgrounds/#{@event.template}.jpg" %>
 
+<h3 class="center" style="padding-left: 40px;">
+    Certificamos que <%= @participant.name %> participou como <%= @participant.participation_type %> do <%= @event.name %> no <%= @event.location %>,
+    durante o período de <%= @event.start_date.strftime('%d/%m/%Y') %> à <%= @event.end_date.strftime('%d/%m/%Y') %>,
+    com carga horária total de <%= @event.workload %> horas.
+</h3>
