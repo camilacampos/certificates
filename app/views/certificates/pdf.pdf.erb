@@ -1,7 +1,7 @@
 <%= wicked_pdf_image_tag "backgrounds/#{@event.template}.jpg" %>
 
 <h3 class="center" style="padding-left: 40px;">
-    Certificamos que <%= @participant.name %> participou como <%= @participant.participation_type %> do <%= @event.name %> no <%= @event.location %>,
-    durante <%= formatar_data(@event.start_date, @event.end_date) %>,
-    com carga horária total de <%= @event.workload %> horas.
+    Certificamos que <%= @participant.name %> foi <%= @participant.participation_type %> do <%= @event.name %>,
+    que foi realizado <%= formatar_data(@event.start_date, @event.end_date) %> no <%= @event.location %>,
+    com um total de <%= @event.workload %> horas de duração.
 </h3>
